@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 # -v pega o inverso
 grep -Ev 'sshd' /home/compartilhado/auth.log.1
