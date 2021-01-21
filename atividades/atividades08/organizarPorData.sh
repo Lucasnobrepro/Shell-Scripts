@@ -1,8 +1,10 @@
 #!/bin/bash
+# Correção: 1,0
 
 dir1="$1"
 dir2="$2"
 
+# Quando você coloca o . antes de /$dir1, só vai funcionar se estiver no mesmo diretório.
 for i in $(ls ./$dir1); do
     date="$(stat $dir1/$i | grep -E "Modi" | cut -d' ' -f2 | cut -d'-' -f1-)"
     ano=$(echo $date | cut -d'-' -f1)
