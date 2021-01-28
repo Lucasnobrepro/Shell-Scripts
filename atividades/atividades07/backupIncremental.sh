@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Correção: 0,3
 ## Criando diretorios de teste
 # mkdir dir1
 # mkdir dir2
@@ -14,6 +14,7 @@ date=$(date -d "$3 $4" +%s)
 
 if [ $# == 4 ]; then
 	# Para cada item no diretorio dir1
+   # Mesmo erro do Carlos Alberto. Usou dir1 quando deveria usar $dir1.
 	for item1 in $(ls dir1); do
 		# Pega a data de modificacao
 		item_date=$(date -d "$(stat ${dir1}/${item1} | grep -E "Modi" | cut -d' ' -f2- | cut -d'.' -f1)" +%s)

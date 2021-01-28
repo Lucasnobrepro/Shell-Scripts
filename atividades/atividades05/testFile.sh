@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 if [ -f "$1" ]
 then
