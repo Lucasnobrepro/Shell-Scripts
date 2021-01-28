@@ -24,7 +24,5 @@ for i in $(ls ./$dir1); do
         mkdir $dir2/$ano/$mes/$dia
         cp $dir1/$i $dir2/$ano/$mes/$dia/
     fi
-
-    
     
 done
