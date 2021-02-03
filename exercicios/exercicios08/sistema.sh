@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Correção: 1,0
 trap "echo \"TCHAU Obrigado por usar o Progama!!!\"; exit;" 2
 opcao=
 key=
