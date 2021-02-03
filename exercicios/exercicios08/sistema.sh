@@ -9,7 +9,7 @@ menu() {
     echo '2: Últimas Mensagens do Kernel (dmesg | tail -n 10)'
     echo '3: Memória Virtual (vmstat 1 10)'
     echo '4: Uso da CPU por núcleo (mpstat -P ALL 1 5)'
-    echo '5: Uso da CPU por processos (pidstat 1 5)'
+    echo '5: Uso da CPsU por processos (pidstat 1 5)'
     echo '6: Uso da Memória Física (free -m)'
     read -p "->" opcao
 }
