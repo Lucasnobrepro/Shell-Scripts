@@ -7,7 +7,6 @@ read -p "Informe o arquivo:" file
 declare -A text
 
 for word in $(cat $file); do
-    # echo $($text[$word])
     if [  "${text[$word]}" == "" ]; then
         text["$word"]=1
     else
