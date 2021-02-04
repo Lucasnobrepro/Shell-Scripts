@@ -1,8 +1,8 @@
 #!/bin/bash
 
-file=$1
+file=
 one=
-# read -p "Informe o arquivo:" file
+read -p "Informe o arquivo:" file
 
 declare -A text
 
