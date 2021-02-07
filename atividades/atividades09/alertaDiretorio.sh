@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 3,0
 
 time_space="$1"
 dir="$2"
