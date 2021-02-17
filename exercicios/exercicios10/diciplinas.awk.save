@@ -1,0 +1,8 @@
+#!/usr/bin/awk-f
+BEGIN{
+	for (i=0; i < 4; i++)
+		print $(NF-0)
+		vetor[]
+
+	for (j=0; j<
+}
