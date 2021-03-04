@@ -1,3 +1,4 @@
+#!/bin/bash
 SUBNET=$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
 IMAGE="ami-03d315ad33b9d49c4"
 KEY=$1
