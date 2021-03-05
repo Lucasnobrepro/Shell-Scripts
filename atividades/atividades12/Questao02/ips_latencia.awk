@@ -1,3 +1,4 @@
+# Não fez o outro?
 BEGIN {
 	print "Relatório de Latência."
 }

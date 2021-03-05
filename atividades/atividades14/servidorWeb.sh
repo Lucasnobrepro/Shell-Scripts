@@ -1,4 +1,6 @@
 #!/bin/bash
+# Não funciona.
+# Mesmo que funcionasse, você poderia ter feito esperar alguns instantes até o estado mudar para running
 SUBNET=$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
 IMAGE="ami-03d315ad33b9d49c4"
 KEY=$1
@@ -10,6 +12,7 @@ aws ec2 authorize-security-group-ingress --group-name SG2 --protocol tcp --port 
 aws ec2 authorize-security-group-ingress --group-name SG2 --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 echo "Criando servidor..."
+# Essas aspas dentro do parênteses, para que servem? Com certeza você não testou esse script.
 INTID=$("aws ec2 run-instances --image-id $IMAGE --instance-type "t2.micro" --key-name $KEY --security-group-ids $SGI --subnet-id $SUBNET -user-data file://script.sh --output text")
 
 IPPUBLIC=$(aws ec2 describe-instances --query "Reservations[0].Instances[0].PublicIpAddress" --output text)

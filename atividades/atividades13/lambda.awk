@@ -1,3 +1,4 @@
+# E o tempo médio?
 BEGIN{
     countAll=0
     countOut=0
