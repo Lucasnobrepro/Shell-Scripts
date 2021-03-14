@@ -2,6 +2,8 @@
 
 apt install -y apache2
 
+# Não está atualizando os valores. Quem teve esse mesmo poblema resolveu colocando \$ no lugar de $ dentro do
+# script que estava sendo criado.
 cat << 'EOF' > /usr/local/bin/atividade.sh
 #!/bin/bash
 
