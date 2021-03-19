@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 KEY=$1
 SUBNET=$(aws ec2 describe-subnets --query "Subnets[0].SubnetId" --output text)
