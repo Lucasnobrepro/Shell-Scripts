@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 CHAVE=$1
 USUARIO=$2
@@ -33,6 +34,7 @@ echo "IP Privado do Banco de Dados: $PrivateIP"
 
 sleep 30
 
+# Não existe o termo PRIVADOIP no arquivo servidorWeb.sh
 sed -Ei "s/USUARIO/$USUARIO/" ./servidorWeb.sh
 sed -Ei "s/PRIVADOIP/$PrivateIP/" ./servidorWeb.sh 
 sed -Ei "s/SENHA/$SENHA/" ./servidorWeb.sh 
