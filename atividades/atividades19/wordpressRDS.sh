@@ -1,4 +1,5 @@
 #!/bin/bash
+# Correção: 1,0
 
 CHAVE=$1
 USUARIO=$2
@@ -34,6 +35,7 @@ Endpoint=$(aws rds describe-db-instances --db-instance-identifier $DBName --quer
 
 echo "Endpoint do RDS: $Endpoint"
 
+# Correção: Não era para substituir o HOST também?
 sed -Ei "s/USUARIO/$USUARIO/" ./servidorWeb.sh
 sed -Ei "s/PRIVADOIP/$Endpoint/" ./servidorWeb.sh 
 sed -Ei "s/SENHA/$SENHA/" ./servidorWeb.sh 
@@ -42,7 +44,7 @@ echo "Criando servidor de Aplicação..."
 
 InstanceId=$(aws ec2 run-instances --image-id $IMAGE --instance-type "t2.micro" --key-name $CHAVE --security-group-ids $SGID --subnet-id $SUBREDE --user-data file://servidorWeb.sh --query "Instances[0].InstanceId" --output text)
 
-
+# Correção: Existe InstanceId2? O laço a seguir nunca irá retornar.
 while true; do
     status=$(aws ec2 describe-instances --instance-id $InstanceId2 --query "Reservations[0].Instances[0].State.Name" --output text)
     if [[ $status == 'running' ]]; then
